@@ -27,17 +27,17 @@
 >|-------------------------|----------|--------------|------------------|
 >| mysql-bin-master.000003 |      294 | HA           | mysql            |
 >
-![QQ截图20160603094719.png](.\images\20160603094719.png)
+![QQ截图20160603094719.png](./images/20160603094719.png)
 
 >##查看二进制日志：
 >	 ls /server/mysql/data/
 >
-![QQ截图20160603094603.png](.\images\20160603094603.png)
+![QQ截图20160603094603.png](./images/20160603094603.png)
 
 
 >	 mysql> show binlog events\G
 >	 
-![Q20160603095055.png](.\images\Q20160603095055.png)
+![Q20160603095055.png](./images/Q20160603095055.png)
 
 >##复制前要保证同步的数据库一致
 >	 mysqldump  -uroot -p123456  HA >HA.sql  #也可以导出数据库
@@ -49,11 +49,11 @@
 >##两台数据库服务器mysql版本要一致
 >	 mysql> show variables like '%version%'; 
 >	 
-![20160603095625.png](.\images\20160603095625.png)
+![20160603095625.png](./images/20160603095625.png)
 >##测试连接到主服务器是否成功
 >	 mysql -uslave -p123456 -h 192.168.0.64
 >	 
-![Q20160603095858.png](.\images\Q20160603095858.png)
+![Q20160603095858.png](./images/Q20160603095858.png)
 
 >####只有复制的权限
 _________________________________________________
@@ -70,22 +70,22 @@ _________________________________________________
 >	 mysql> start slave; 
 >	 mysql> show slave status\G  查看状态
 >
-![Q20160603100332.png](.\images\Q20160603100332.png)
+![Q20160603100332.png](./images/Q20160603100332.png)
 >####Slave_IO_Running ：一个负责与主机的io通信 connecting no
 >####Slave_SQL_Running：负责自己的slave mysql进程
 >##再到主服务器上查看状态：
 >	 mysql> show processlist \G
 >
-![QQ20160603100619.png](.\images\QQ20160603100619.png)
+![QQ20160603100619.png](./images/QQ20160603100619.png)
 >##插入数据测试同步
 >	mysql> insert into T1 values(1,'天河');
 >####从数据库上查看：
 >
-![QQ20160603100909.png](.\images\QQ20160603100909.png)
+![QQ20160603100909.png](./images/QQ20160603100909.png)
 >##排错：
 >####如果遇到主从不同步，看一下主从bin-log的位置，然后再同步
 >
-![20160603094719.png](.\images\20160603094719.png)
+![20160603094719.png](./images/20160603094719.png)
 >##从服务器执行MySQL命令下：
 >	 mysql> slave stop；             #先停止slave服务
 >	 mysql> change master to master_log_file='mysqllog.000003' ,master_log_pos=294;  #根据上面主服务器的show master status的结果，进行从服务器的二进制数据库记录回归，达到同步的效果

@@ -5,8 +5,8 @@
 >###DDOS概述：
 	分布式拒绝服务(DDoS:Distributed Denial of Service)攻击，指借助于客户/服务器技术，将多个计算机联合起来作为攻击平台，对一个或多个目标发动DDoS攻击，从而成倍地提高拒绝服务攻击的威力。
 >###攻击原理如图：
-![1.png](.\images\1.png)
-![2.png](.\images\2.png)
+![1.png](./images/1.png)
+![2.png](./images/2.png)
 >###如何查是否受到DDOS攻击？
 >	 通过：netstat  查看网络连接数。如果一个IP地址对服务器建立很多连接数（比如一分钟产生了100个连接），就认为发生了DDOS
 >	 [root@xuegod63 html]# vim  ddos-test.sh   #写入以下内容
@@ -204,13 +204,13 @@
 >	 重启：/usr/local/ddos/ddos.sh -c
 >###实验
 >	 [root@zhoushuai69 ~]# ab -n 1000 -c 10 http://192.168.0.66/index.php
-![20160604224900.png](.\images\20160604224900.png)
+![20160604224900.png](./images/20160604224900.png)
 
 >	 [root@zhoushuai66 ~]# iptables -L -n
-![20160604225023.png](.\images\20160604225023.png)
+![20160604225023.png](./images/20160604225023.png)
 
 >###实验结果
-![111120160604230354.png](.\images\111120160604230354.png)
+![111120160604230354.png](./images/111120160604230354.png)
 
 >	 [root@zhoushuai66 ~]# service crond restart
 >	 [root@zhoushuai66 ~]# cat /usr/local/ddos/ignore.ip.list

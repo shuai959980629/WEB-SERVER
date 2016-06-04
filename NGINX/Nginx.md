@@ -44,15 +44,15 @@ _________________________________________________________________________
 >	 [root@zhoushuai nginx-1.9.14]# make -j 4 && make install
 >	 [root@zhoushuai ~]# ll /usr/local/nginx/
 >
-![1.png](.\images\1.png)
+![1.png](./images/1.png)
 >###配置Nginx
 >	 [root@zhoushuai ~]# vim /usr/local/nginx/conf/nginx.conf
 >	 改：
 >
-![11020160604101917.png](.\images\11020160604101917.png)
+![11020160604101917.png](./images/11020160604101917.png)
 >	 为：
 >
-![11020160604102134.png](.\images\11020160604102134.png)
+![11020160604102134.png](./images/11020160604102134.png)
 
 >###启动Nginx服务
 >	 [root@zhoushuai ~]# /usr/local/nginx/sbin/nginx
@@ -91,13 +91,13 @@ _________________________________________________________________________
 >	 [root@zhoushuai ~]# chkconfig nginx on
 >	 [root@zhoushuai ~]# chkconfig --list nginx
 >###安装成功
-![20160603112242.png](.\images\20160603112242.png)
+![20160603112242.png](./images/20160603112242.png)
 >###扩展：Nginx维护命令
 >	 [root@zhoushuai ~]# nginx -t		#检查配置文件是否有语法错误
 >	 nginx: the configuration file /server/nginx/conf/nginx.conf syntax is ok
 >	 nginx: configuration file /server/nginx/conf/nginx.conf test is successful
 >
-![20160603112627.png](.\images\20160603112627.png)
+![20160603112627.png](./images/20160603112627.png)
 >###查看Nginx配置参数
 >	 [root@zhoushuai ~]# nginx -v/V
 >	 [root@zhoushuai66 ~]# nginx -v
@@ -107,7 +107,7 @@ _________________________________________________________________________
 >	 built by gcc 4.4.7 20120313 (Red Hat 4.4.7-17) (GCC)
 >	 configure arguments: --prefix=/usr/local/nginx --with-http_dav_module --with-http_stub_status_module --with-http_addition_module --with-http_sub_module --with-http_flv_module --with-http_mp4_module --with-pcre=/usr/local/src/pcre-8.38 --user=nginx --group=nginx
 >
-![20160603113130.png](.\images\20160603113130.png)
+![20160603113130.png](./images/20160603113130.png)
 >#注：重新编译时，一定要查看以前的编译配置，只需在原有配置参数后添加新的参数即可
 >#[root@zhoushuai ~]# nginx -s reload			#重载Nginx配置文件
 
@@ -127,11 +127,11 @@ _________________________________________________________________________
 >	 5、通用hash、一致性hash
 >	 这两种也是扩展策略，在具体的实现上有些差别，通用hash比较简单，可以以nginx内置的变量为key进行hash，一致性hash采用了nginx内置的一致性hash环，可以支持memcache
 >
-![20160603173556.png](.\images\20160603173556.png)
-![20160603173252.png](.\images\20160603173252.png)
-![20160603173324.png](.\images\20160603173324.png)
-![20160603173919.png](.\images\20160603173919.png)
-![20160603175043.png](.\images\20160603175043.png)
+![20160603173556.png](./images/20160603173556.png)
+![20160603173252.png](./images/20160603173252.png)
+![20160603173324.png](./images/20160603173324.png)
+![20160603173919.png](./images/20160603173919.png)
+![20160603175043.png](./images/20160603175043.png)
 >#[root@zhoushuai ~]# nginx -s reload			#重载Nginx配置文件
 
 

@@ -31,11 +31,11 @@ _________________________________________________________________________
 >	  或
 >	  yum -y install ntp
 >	  
-![20160603182746.png](.\image\20160603182746.png)
+![20160603182746.png](./image/20160603182746.png)
 
 >	  安装客户端：
 >	  [root@zhoushuai Packages]# rpm -ivh /mnt/Packages/ntpdate-4.2.4p8-2.el6.x86_64.rpm
-![0160603182940.png](.\image\0160603182940.png)
+![0160603182940.png](./image/0160603182940.png)
 
 >	  配置文件位置
 >	  [root@zhoushuai ~]# ls /etc/ntp.conf
@@ -44,7 +44,7 @@ _________________________________________________________________________
 >	  先查看123端口是否开放：
 >	  [root@zhoushuai ~]# netstat -anptu | grep 123
 >	  
-![20160603183236.png](.\image\20160603183236.png)
+![20160603183236.png](./image/20160603183236.png)
 
 >	  [root@xuegod63 ~]# ntpstat			#列出是否与上游服务器连接。需要过5分钟
 >	  synchronised to local net at stratum 11  #可以看到我们当前在11层。

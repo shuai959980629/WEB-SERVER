@@ -35,7 +35,7 @@ _________________________________________________________________________
 >	 [root@zhoushuai ~]# rz
 >	 [root@zhoushuai ~]# tar zxvf fail2ban-0.8.14.tar.gz
 >	 [root@zhoushuai fail2ban-0.8.14]# vim README.md  #查看以下内容
-![1000.png](.\images\1000.png)
+![1000.png](./images/1000.png)
 
 >	 需要安装python开发环境，并且版本要大于2.4
 >	 查看当前系统中python的版本：
@@ -98,7 +98,7 @@ _________________________________________________________________________
 >	 Starting fail2ban:                                         [  OK  ]
 >	 [root@xuegod63 fail2ban]# iptables -L -n  
 >	 
-![20160604201318.png](.\images\20160604201318.png)
+![20160604201318.png](./images/20160604201318.png)
 >	 [root@zhoushuai69 ~]# ssh root@192.168.0.66
 >	 root@192.168.0.66's password: 
 >	 Permission denied, please try again.
@@ -110,7 +110,7 @@ _________________________________________________________________________
 >	 ssh: connect to host 192.168.0.66 port 22: Connection refused
 >	 [root@zhoushuai69 ~]# 
 >	 
-![20160604201148.png](.\images\20160604201148.png)
+![20160604201148.png](./images/20160604201148.png)
 >	 [root@zhoushuai66 ~]#  iptables -nL | tail -4
 >	 Chain fail2ban-SSH (1 references)
 >	 target     prot opt source               destination         
@@ -134,7 +134,7 @@ _________________________________________________________________________
 >	    |- Currently banned: 1
 >	    |  `- IP list:       192.168.1.64
 >	    `- Total banned:     1
-![20160604201912.png](.\images\20160604201912.png)
+![20160604201912.png](./images/20160604201912.png)
 >###解除Bantime
 >	 [root@xuegod63 fail2ban]# > /var/log/secure  #清日志。 从现在开始
 >	 [root@xuegod63 fail2ban]# /etc/init.d/fail2ban restart

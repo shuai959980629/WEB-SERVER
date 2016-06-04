@@ -76,9 +76,9 @@ _________________________________________________________________________
 >	  [root@zhoushuai ~]# cp /usr/local/apache2/bin/apachectl /etc/init.d/
 >	  [root@zhoushuai ~]# chmod +x /etc/init.d/apachectl
 >	  
-![20160603132531.png](.\images\20160603132531.png)
+![20160603132531.png](./images/20160603132531.png)
 >	  
-![20160603132617.png](.\images\20160603132617.png)
+![20160603132617.png](./images/20160603132617.png)
 >###将服务添加到系统启动列表中
 >	  [root@zhoushuai ~]# chkconfig --add apachectl
 >	  [root@zhoushuai ~]# chkconfig apachectl on
@@ -91,9 +91,9 @@ _________________________________________________________________________
 
 >###测试访问，
 >
-![20160603134208.png](.\images\20160603134208.png)
+![20160603134208.png](./images/20160603134208.png)
 >
-![20160603134221.png](.\images\20160603134221.png)
+![20160603134221.png](./images/20160603134221.png)
 
 
 
