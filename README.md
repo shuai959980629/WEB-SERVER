@@ -14,5 +14,4 @@
     <li><a target="_blank" href="APACHE/APACHE.md">源码安装APACHE</a></li>
     <li><a target="_blank" href="Redis/Redis.md">Redis+php7</a></li>
     <li><a target="_blank" href="Memcache/Memcached.md">Memcached+php7</a></li>
-    <li><a target="_blank" href="resume.md">个人简历</a></li>
 </ul>
